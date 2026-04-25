@@ -25,6 +25,41 @@ Eulerian conditions:
 - 0 vertices with odd degree → Eulerian cycle
 - 2 vertices with odd degree → Eulerian path
 - Otherwise → no Eulerian path or cycle
+## How to Run
+
+Install dependencies:
+
+```bash
+pip install networkx matplotlib
+```
+## Run the program
+python src/drum_eulerian.py data/graf_drum.txt
+
+**Project Structure**:
+
+```md
+## Project Structure
+
+```text
+eulerian-path-finder/
+├── src/
+├── data/
+├── docs/
+├── screenshots/
+└── README.md
+```
+
+3. Adaugă screenshot-uri în README:
+
+```md
+## Screenshots
+
+### Source code
+![Code](screenshots/code_preview.png)
+
+### Input graph example
+![Input graph](screenshots/graf_drum_input.png)
+```
 ## Author
 Student: Marius Zaharia Andronic
 Facultatea: Fiesc Calculatoare – dual
