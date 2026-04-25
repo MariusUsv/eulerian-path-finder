@@ -25,15 +25,6 @@ Eulerian conditions:
 - 0 vertices with odd degree → Eulerian cycle
 - 2 vertices with odd degree → Eulerian path
 - Otherwise → no Eulerian path or cycle
-
-## Project Structure
-```text
-eulerian-path-finder/
-├── src/
-├── data/
-├── docs/
-├── screenshots/
-└── README.md
 ## Author
 Student: Marius Zaharia Andronic
 Facultatea: Fiesc Calculatoare – dual
