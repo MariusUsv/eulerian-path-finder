@@ -2,29 +2,36 @@
 
 ## 📌 Overview
 
-This project implements an efficient algorithm for detecting and constructing an **Eulerian path** in an undirected graph.
+This project implements an algorithm for detecting and constructing an **Eulerian path** in an undirected graph.
 
-It reads graph data from a file, checks if an Eulerian path exists, and if so, computes it using **Hierholzer’s algorithm**. The result is displayed both in the console and as a graphical visualization.
+An Eulerian path is a path that visits every edge exactly once. Such a path exists only if the graph contains **0 or 2 nodes with odd degree**.
+
+The application:
+
+* reads graph data from a file
+* checks if an Eulerian path exists
+* computes the path using an efficient algorithm
+* visualizes the graph
 
 ---
 
 ## ⚙️ Features
 
-* ✔️ Read graph from `.txt` file (edge list)
-* ✔️ Detect if Eulerian path exists
-* ✔️ Identify nodes with odd degree
-* ✔️ Compute Eulerian path (Hierholzer algorithm)
-* ✔️ Graph visualization using NetworkX + Matplotlib
-* ✔️ Clean modular structure (ready for scaling)
+* ✔️ Graph input from `.txt` file (edge list)
+* ✔️ Eulerian path validation
+* ✔️ Detection of odd-degree nodes
+* ✔️ Path computation using Hierholzer’s algorithm
+* ✔️ Graph visualization (NetworkX + Matplotlib)
+* ✔️ Clean and readable Python code
 
 ---
 
-## 🧠 Algorithm Used
+## 🧠 Algorithm
 
-The project uses **Hierholzer’s Algorithm**, which constructs an Eulerian path in linear time:
+The project uses **Hierholzer’s Algorithm**:
 
 * Time Complexity: **O(E)**
-* Works for graphs with:
+* Works for:
 
   * 0 odd-degree nodes → Eulerian circuit
   * 2 odd-degree nodes → Eulerian path
@@ -37,7 +44,7 @@ The project uses **Hierholzer’s Algorithm**, which constructs an Eulerian path
 eulerian-path-finder/
 │
 ├── src/
-│   ├── drum_eulerian.py
+│   └── drum_eulerian.py
 │
 ├── data/
 │   ├── graf_drum.txt
@@ -67,7 +74,7 @@ pip install networkx matplotlib
 python src/drum_eulerian.py
 ```
 
-### 3. Input example
+### 3. Provide input
 
 ```
 Enter graph file: data/graf_drum.txt
@@ -75,7 +82,7 @@ Enter graph file: data/graf_drum.txt
 
 ---
 
-## 🧪 Example Input (graf_drum.txt)
+## 🧪 Example Input
 
 ```
 0 1
@@ -117,12 +124,12 @@ Eulerian path:
 
 ---
 
-## 📈 Possible Improvements
+## 📈 Future Improvements
 
-* Add support for directed graphs
-* Export results to file (JSON / CSV)
-* Interactive UI (Tkinter / Web)
-* Performance optimization for large graphs
+* Support for directed graphs
+* Export results (JSON / CSV)
+* CLI arguments instead of manual input
+* Optimization for large graphs
 
 ---
 
@@ -130,10 +137,9 @@ Eulerian path:
 
 **Marius Andronic**
 Computer Dual Engineering Student
-Focused on practical systems, algorithms, and real-world applications
 
 ---
 
 ## 📄 License
 
-This project is open-source and available under the MIT License.
+MIT License
