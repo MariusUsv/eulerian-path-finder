@@ -1,57 +1,59 @@
-# Eulerian Path Finder (Python)
+# 🔍 Eulerian Path Finder
 
-## Overview
+## 📌 Overview
 
-This project implements an algorithm for detecting and constructing an Eulerian path or Eulerian cycle in an undirected graph.
+This project implements an efficient algorithm for detecting and constructing an **Eulerian path** in an undirected graph.
 
-The solution is based on **Hierholzer’s algorithm**, which efficiently builds the Eulerian path by traversing each edge exactly once.
-
-The application supports:
-
-* reading graphs from text files
-* detecting Eulerian path or cycle
-* visualizing the graph using NetworkX
+It reads graph data from a file, checks if an Eulerian path exists, and if so, computes it using **Hierholzer’s algorithm**. The result is displayed both in the console and as a graphical visualization.
 
 ---
 
-## Features
+## ⚙️ Features
 
-* Detects if a graph has:
-
-  * Eulerian cycle (0 odd-degree vertices)
-  * Eulerian path (2 odd-degree vertices)
-* Constructs the Eulerian path using Hierholzer’s algorithm
-* Reads graph data from input files
-* Visualizes the graph structure and highlights the Eulerian path
-* Saves output path to file
+* ✔️ Read graph from `.txt` file (edge list)
+* ✔️ Detect if Eulerian path exists
+* ✔️ Identify nodes with odd degree
+* ✔️ Compute Eulerian path (Hierholzer algorithm)
+* ✔️ Graph visualization using NetworkX + Matplotlib
+* ✔️ Clean modular structure (ready for scaling)
 
 ---
 
-## Technologies Used
+## 🧠 Algorithm Used
 
-* Python 3
-* NetworkX
-* Matplotlib
+The project uses **Hierholzer’s Algorithm**, which constructs an Eulerian path in linear time:
+
+* Time Complexity: **O(E)**
+* Works for graphs with:
+
+  * 0 odd-degree nodes → Eulerian circuit
+  * 2 odd-degree nodes → Eulerian path
 
 ---
 
-## Algorithm
+## 📂 Project Structure
 
-The project uses **Hierholzer’s algorithm**, with time complexity:
-
-```text
-O(E) — where E is the number of edges
+```
+eulerian-path-finder/
+│
+├── src/
+│   ├── drum_eulerian.py
+│
+├── data/
+│   ├── graf_drum.txt
+│   ├── graf_mare.txt
+│   ├── graf_mic.txt
+│
+├── screenshots/
+│   ├── program_output.png
+│   ├── graph_visual.png
+│
+└── README.md
 ```
 
-Eulerian conditions:
-
-* 0 vertices with odd degree → Eulerian cycle
-* 2 vertices with odd degree → Eulerian path
-* Otherwise → no Eulerian path exists
-
 ---
 
-## How to Run
+## 🚀 How to Run
 
 ### 1. Install dependencies
 
@@ -65,78 +67,73 @@ pip install networkx matplotlib
 python src/drum_eulerian.py
 ```
 
-### 3. Provide input file
+### 3. Input example
 
-Example:
-
-```text
-graf_drum.txt
+```
+Enter graph file: data/graf_drum.txt
 ```
 
 ---
 
-## Example Output
+## 🧪 Example Input (graf_drum.txt)
 
-```text
+```
+0 1
+1 2
+2 3
+3 4
+4 1
+```
+
+---
+
+## 📊 Output Example
+
+```
+=== EULERIAN PATH FINDER ===
 Eulerian path:
-1 -> 4 -> 3 -> 2 -> 1 -> 0
+1 → 4 → 3 → 2 → 1 → 0
 ```
 
 ---
 
-## Project Structure
-
-```text
-eulerian-path-finder/
-├── src/
-│   └── drum_eulerian.py
-├── data/
-│   ├── graf_drum.txt
-│   ├── graf_mare.txt
-│   └── graf_mic.txt
-├── screenshots/
-│   ├── run_example.png
-│   └── graph_output.png
-├── docs/
-│   ├── documentatie.pdf
-│   └── prezentare.pptx
-└── README.md
-```
-
----
-
-## Screenshots
+## 📸 Screenshots
 
 ### Program Output
 
-![Program Output](screenshots/run_example.png)
+![Program Output](screenshots/program_output.png)
 
 ### Graph Visualization
 
-![Graph Visualization](screenshots/graph_output.png)
+![Graph Visualization](screenshots/graph_visual.png)
 
 ---
 
-## What I Learned
+## 🛠️ Technologies Used
 
-* Graph theory fundamentals (Eulerian paths & cycles)
-* Implementation of Hierholzer’s algorithm
-* Working with file-based input
-* Data visualization using NetworkX and Matplotlib
-* Structuring a Python project for real-world usage
+* Python 3
+* NetworkX
+* Matplotlib
 
 ---
 
-## Why This Project Matters
+## 📈 Possible Improvements
 
-This project demonstrates:
-
-* algorithmic thinking
-* practical implementation of graph algorithms
-* clean project structure
-* ability to build complete, working applications
+* Add support for directed graphs
+* Export results to file (JSON / CSV)
+* Interactive UI (Tkinter / Web)
+* Performance optimization for large graphs
 
 ---
-## Author
-Student: Marius Zaharia Andronic
-Facultatea: Fiesc Calculatoare – dual
+
+## 👤 Author
+
+**Marius Andronic**
+Computer Dual Engineering Student
+Focused on practical systems, algorithms, and real-world applications
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
